@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Console App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Danii\OneDrive\Documents\VS Code project\ConsoleApp1\Style.css">
+    <script src="C:\Users\Danii\OneDrive\Documents\VS Code project\ConsoleApp1\Script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Home" role="navigation" onclick="showSection('aboutMe'); return false;">Home</a></li>
+<li><a href="#Project" role="navigation" onclick="showSection('projects'); return false;">Project</a></li>
+<li><a href="#Contact" role="navigation" onclick="showSection('contact'); return false;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1>Welcome to My Console App</h1>
+    <p>This is the homepage.</p>
+    <section id="aboutMe">
+        <h2>About Me</h2>
+        <p>Hello! I'm a developer passionate about creating console applications. This is a simple example of a console app with HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="projects" hidden>
+        <h2>My Projects</h2>
+        <!-- Place inside your #projects section, above the <article> elements -->
+        <label for="project-filter">Filter Projects:</label>
+        <input type="text" id="project-filter" placeholder="Type to filter projects...">
+        <article>
+            <h3>Project 1: Console Calculator</h3>
+            <p>A simple calculator that performs basic arithmetic operations.</p>
+        
+        <figure>
+            <img src="Calculator.png" alt="Console Calculator Screenshot" width="15" height="20">
+            <figcaption>Screenshot of Console Calculator</figcaption>
+        </figure>
+
+        <p>This is my skills.</p>
+        <ul>
+            <li>.net developer</li>
+            <li>Back-End developer</li>
+            <li>Front-End developer</li>
+        </ul>
+        </article>
+    </section>
+    
+    <section id="contact" hidden>
+            <h2>Contact Us</h2>
+            <form id="contactForm" novalidate>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Send</button>
+            <div id="formError" style="color: #c00; margin-top: 0.5em;" aria-live="polite"></div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Console App. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

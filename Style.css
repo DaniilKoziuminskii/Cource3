@@ -1,0 +1,155 @@
+/* High contrast, accessible color scheme */
+body {
+    background-color: #ffffff;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, nav, footer {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+nav a:focus, nav a:hover {
+    background-color: #0055a5;
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+label {
+    font-weight: bold;
+    color: #003366;
+}
+
+input, textarea, button {
+    font-size: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #003366;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+button {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover, button:focus {
+    background-color: #0055a5;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+/* Tablet styles */
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: flex-start;
+    }
+    header, nav, footer {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    section, footer {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 1em;
+        padding: 0 0.5em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: flex-start;
+    }
+    section, footer {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* Add to your style.css */
+nav ul {
+    display: flex;
+}
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    #hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+@media (min-width: 601px) {
+    #hamburger {
+        display: none;
+    }
+}
+
