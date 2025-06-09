@@ -3,14 +3,6 @@ function toggleMenu() {
     nav.classList.toggle('show');
 }
 
-// Optional: Add event listener if you have a hamburger icon with id="hamburger"
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-    }
-});
-
 // Filter feature for the “Projects” section
 document.addEventListener('DOMContentLoaded', function() {
     // ...existing hamburger code...
